@@ -28,10 +28,10 @@ function AddMovieForm({ onAddMovie }) {
           <hr />
 
           <label htmlFor="title-field">Titel:</label>
-          <input type="text" id="title-field" className="form-control" />
+          <input type="text" id="title-field" className="form-control mt-1 mb-1" />
 
           <label htmlFor="rating-field">Betyg:</label>
-          <select id="rating-field" className="form-control">
+          <select id="rating-field" className="form-control mt-2 ">
             <option value="0">Välj betyg här...</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -40,11 +40,7 @@ function AddMovieForm({ onAddMovie }) {
             <option value="5">5</option>
           </select>
 
-          <input
-            type="submit"
-            className="btn btn-success mt-3"
-            value="Spara film"
-          />
+            <div className="text-start"><input type="submit" className="btn btn-success mt-3 mb-3" value="Spara film"/></div>
         </fieldset>
       </form>
     </div>

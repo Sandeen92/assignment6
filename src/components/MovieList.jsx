@@ -4,7 +4,7 @@ function MovieList({ movies }) {
   return (
     <div>
       <h2>Filmer</h2>
-      <ul id="movies">
+      <ul id="movies" className="ps-0 ms-0">
         {movies.map((movie, index) => (
           <Movie key={index} title={movie.title} grade={movie.grade} />
         ))}

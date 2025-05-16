@@ -15,7 +15,7 @@ function Movie({ title, grade }) {
     <li
       data-grade={grade}
       data-title={title}
-      className="mb-2 p-3 bg-light shadow-sm d-flex justify-content-between align-items-center"
+      className="mb-2 p-3 border border-light shadow d-flex justify-content-between align-items-center"
     >
       <span>{title}</span>
       <span>

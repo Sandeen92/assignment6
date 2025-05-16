@@ -6,6 +6,7 @@ function Movie({ title, grade }) {
         key={i}
         src="/images/star.png"
         alt="Star"
+        style={{ height: '25px', marginLeft: '5px' }}
       />
     );
   }
@@ -23,6 +24,7 @@ function Movie({ title, grade }) {
           src="/images/delete.png"
           alt="Delete movie"
           className="delete-movie-icon"
+          style={{ height: '35px', marginLeft: '5px', cursor: 'pointer' }}
         />
       </span>
     </li>

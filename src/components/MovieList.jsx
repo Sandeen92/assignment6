@@ -1,12 +1,12 @@
 import Movie from './Movie';
 
-function MovieList({ movies }) {
+function MovieList({ movies, onDeleteMovie }) {
   return (
     <div>
       <h2>Filmer</h2>
       <ul id="movies" className="ps-0 ms-0">
         {movies.map((movie, index) => (
-          <Movie key={index} title={movie.title} grade={movie.grade} />
+          <Movie key={index} title={movie.title} grade={movie.grade} onDelete={() => onDeleteMovie(index)} />
         ))}
       </ul>
     </div>

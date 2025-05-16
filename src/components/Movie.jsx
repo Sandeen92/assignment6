@@ -1,4 +1,4 @@
-function Movie({ title, grade }) {
+function Movie({ title, grade, onDelete }) {
   const stars = [];
   for (let i = 0; i < grade; i++) {
     stars.push(
@@ -15,7 +15,7 @@ function Movie({ title, grade }) {
     <li
       data-grade={grade}
       data-title={title}
-      className="mb-2 p-3 border border-light shadow d-flex justify-content-between align-items-center"
+      className="mb-2 p-3 bg-body-tertiary border border-light shadow d-flex justify-content-between align-items-center"
     >
       <span>{title}</span>
       <span>
@@ -25,6 +25,7 @@ function Movie({ title, grade }) {
           alt="Delete movie"
           className="delete-movie-icon"
           style={{ height: '35px', marginLeft: '5px', cursor: 'pointer' }}
+          onClick={onDelete}
         />
       </span>
     </li>

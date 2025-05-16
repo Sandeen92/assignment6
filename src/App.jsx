@@ -6,10 +6,17 @@ import MovieList from './components/MovieList';
 function App() {
   const [movies, setMovies] = useState([]);
 
-  const handleAddMovie = (title, grade) => {
-    const newMovie = { title, grade: parseInt(grade) };
-    setMovies([...movies, newMovie]);
-  };
+  function handleAddMovie(title, grade) {
+    const copy = movies.slice()
+    copy.push({ title, grade: parseInt(grade) })
+    setMovies(copy)
+  }
+
+  function handleDeleteMovie(index) {
+    const copy = movies.slice();
+    copy.splice(index, 1);
+    setMovies(copy);
+  }
 
   return (
     <>
@@ -19,7 +26,7 @@ function App() {
         <AddMovieForm onAddMovie={handleAddMovie}/>
         </div>
         <div>
-          <MovieList movies={movies}/>
+          <MovieList movies={movies} onDeleteMovie={handleDeleteMovie}/>
         </div>
       </div>
     </>

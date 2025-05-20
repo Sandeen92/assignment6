@@ -28,7 +28,7 @@ function AddMovieForm({ onAddMovie }) {
           <hr />
 
           <label htmlFor="title-field">Titel:</label>
-          <input type="text" id="title-field" className="form-control mt-1 mb-1" />
+          <input type="text" id="title-field" className="form-control mt-1 mb-1" placeholder="Skriv titel här..."/>
 
           <label htmlFor="rating-field">Betyg:</label>
           <select id="rating-field" className="form-control mt-2 ">
